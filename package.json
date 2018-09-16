@@ -6,8 +6,18 @@
 		"body-parser": "^1.17.1",
 		"express": "^4.15.2"
 	},
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:rifkyalikiki/example-api-app.git"
-    }
+	"scripts": {
+		"prestart": "npm install",
+		"start": "JUNIT_REPORT_PATH=test-result/result.xml JUNIT_REPORT_STACK=1 mocha --timeout 25000 --colors --reporter mocha-jenkins-reporter || true"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:alsidneio/example-api-app.git"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"mocha": "^5.2.0",
+		"mocha-jenkins-reporter": "^0.4.0",
+		"supertest": "^3.3.0"
+	}
 }

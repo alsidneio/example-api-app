@@ -56,5 +56,6 @@ app.get('/users/2/location', function(req, res) {
  	}
 });
 
+
 app.listen(port);
 console.log("Server loaded. The magic happens on port", port)
